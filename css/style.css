@@ -1,0 +1,132 @@
+:root {
+  --wrapper: 768px;
+
+  --btn-big-size: 3rem;
+  --btn-middle-size: 2rem;
+  --btn-small-size: 1rem;
+}
+
+body {
+  background: #eee;
+}
+.wrapper {
+  min-width: 480px;
+  max-width: 960px;
+  margin: auto;
+  font-family: sans-serif;
+  box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, 0.2);
+  box-sizing: border-box;
+  padding: 1rem 0.5rem 1rem 1rem;
+  background: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  text-transform: capitalize;
+}
+p {
+  text-align: justify;
+  text-indent: 2rem;
+}
+figure {
+  text-align: right;
+  font-family: "Reenie Beanie", cursive;
+}
+.img-wrp,
+.text-wrp {
+  width: 49%;
+  box-shadow: 1px 1px 1px 1px hsla(0, 0%, 0%, 0.2);
+  box-sizing: border-box;
+  padding: 0.25rem;
+}
+
+.img-wrp img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.img-answer,
+.img-answer-0,
+.img-answer-2 {
+  filter: opacity(100%);
+  transition: filter 0.4s ease-in-out;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.warning::before {
+  content: " ! ";
+  background: yellow;
+  color: red;
+}
+
+.comment,
+.comment::before,
+.comment::after {
+  color: grey;
+}
+.comment::before {
+  content: "/* ";
+}
+.comment::after {
+  content: " */ ";
+}
+
+.hide {
+  filter: opacity(0%);
+  transition: filter 0.4s ease-in-out;
+}
+
+/*  BURGER */
+.burger-btn {
+  --s: var(--btn-small-size);
+  margin: 1rem;
+  width: var(--s);
+  height: var(--s);
+  cursor: pointer;
+}
+
+.burger-btn__line {
+  /* =======  only odd size px ===== */
+  --s: calc(var(--btn-small-size) + 1px);
+  background: grey;
+  height: calc(var(--s) / 5);
+  margin-bottom: calc(var(--s) / 5);
+  transition: all 0.4s ease-in-out;
+}
+.burger-btn__bottom {
+  margin-bottom: 0;
+}
+
+.burger-btn__top--click {
+  transform-origin: center;
+  transform: translatey(200%) rotate(45deg);
+  transition: all 0.4s ease-in-out;
+}
+
+.burger-btn__bottom--click {
+  transform-origin: center;
+  transform: translatey(-200%) rotate(-45deg);
+  transition: all 0.4s ease-in-out;
+}
+
+.burger-btn__center--click {
+  transform-origin: center;
+  transform: rotatey(90deg);
+  transition: all 0.4s ease-in-out;
+}
+
+/*    --FOOTER         */
+.burger-btn--footer .burger-btn__line {
+  background: #f88;
+}
+/*    END --FOOTER   */

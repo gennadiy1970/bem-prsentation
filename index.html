@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BEM__presentation--btn</title>
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54="
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="section">
+            <h3>multipage template</h3>
+            <figure>
+                <cite>There are only two hard problems in Computer Science: cache invalidation and naming things</cite>
+                <figcaption>
+                    Phil Karlton</figcaption>
+            </figure>
+            <div class="row">
+                <div class="img-wrp">
+                    <img src="./img/template.svg" alt="template">
+                </div>
+                <div class="text-wrp">
+                    <h4>Block</h4>
+                    <p>Блок — это самостоятельная часть страницы.</p>
+                    <ul>
+                        <li>
+                            Название класса должно быть простым и коротким, имена блоков могут состоять из латинских букв, цифр и тире.
+                        </li>
+                        <li>
+                            Название класса должно отвечать на вопрос «Что это?»
+
+                        </li>
+                        <li class="warning">
+                            Название не должно отвечать на вопрос «Как выглядит?»
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h3>blocks name &amp; structure of project</h3>
+            <figure>
+                <cite>All the Sources lead to Build</cite>
+                <figcaption>пословица</figcaption>
+            </figure>
+            <div class="row">
+                <div class="img-wrp">
+                    <div class="burger-btn" id="hideOff-0">
+                        <div class="burger-btn__line burger-btn__top"></div>
+                        <div class="burger-btn__line burger-btn__center"></div>
+                        <div class="burger-btn__line burger-btn__bottom"></div>
+                    </div>
+                    <img class="hide img-answer-0" src="./img/dir.png" alt="template">
+                </div>
+                <div class="text-wrp">
+                    <h4>Block</h4>
+                    <p class="warning">При сборке все файлы одного типа будут слиты в один общий файл.</p>
+                    <p>
+                        <spam class="comment">например в сборщике будут такие записи
+                            <br> './src/css/**//*.css' что означает '
+                            <em style="font-size: 12px">внутри проекта из всех поддиректорий src/css все файлы с расширением css</em>'
+                            <br> а запись 'style.css' - '
+                            <em style="font-size: 12px">один файл</em>).</spam>
+                    </p>
+                    <p>Как правило заказчик указывает на отображение или поведение блока
+                        <em>на сайте</em>, а не в папке проекта. Как в таком случае быстро найти нужные файлы в директории src?
+                    </p>
+                    <p>Названия папок в src нужны разработчику. Если названия классов и директорий/папок и файлов связаны с
+                        названием классов, то поиск нужных файлов не составит труда.
+                    </p>
+                    <p class="warning">Отбражать в названии блока внешние контейнеры не нужно. При необходимости все контейнеры блока можно
+                        легко отследить по DOM элементу на сайте.
+                    </p>
+                    <p class="comment">Лучше всего представлять блок как директорию, где будет находится все, связанное с отображением и поведением
+                        повторяющейся части дизайна. Реальная возможность размещать все файлы (html, css, js) зависит от
+                        инструментов сборки. </p>
+
+                    <h4>Варианты названия для блока:</h4>
+                    <ul>
+                        <li>burger</li>
+                        <li>btn-burger</li>
+                        <li>burger-btn</li>
+                        <li class="warning">3lines-X</li>
+                        <li>btn-transformer</li>
+                        <li>...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h3>element</h3>
+            <figure>
+                <cite>Что значит имя?
+                    <br> Роза пахнет розой,
+                    <br> Хоть розой назови ее, хоть нет.</cite>
+                <figcaption>"Romeo and Juliet", Shakespeare</figcaption>
+            </figure>
+            <div class="row">
+                <div class="img-wrp">
+                    <div class="burger-btn" id="hideOff">
+                        <div class="burger-btn__line burger-btn__top"></div>
+                        <div class="burger-btn__line burger-btn__center"></div>
+                        <div class="burger-btn__line burger-btn__bottom"></div>
+                    </div>
+
+                    <h4>Refactoring</h4>
+                    <p class="warning">Элемент элемента. Запись вида
+                        <em>block__elem1__elem2</em> в методологии BEM недопустима. Если подобное состояние кажется возможным,
+                        значит мы имеем дело
+                        <em>не с одним блоком</em>. Разделение общего, связанного состояния на более независимые и отдельные
+                        - постоянный процесс в разработке. У этого процесса есть устоявшееся название -
+                        <em>рефакторинг</em>
+                    </p>
+                    <img class="hide img-answer" src="./img/element.png" alt="element" width="450">
+                </div>
+                <div class="text-wrp">
+                    <p>Если &#x1f339;
+                        <span class="comment">роза</span> это
+                        <em>блок</em>, то запах розы это
+                        <em>элемент</em> блока.</p>
+                    <p>Элемент не отделим от блока. В синтаксисе BEM элемент обозначают суффиксом с двумя подчеркиваниями
+                        <span class="comment">block__element</span>. Но возможны особые договоренности внутри вашего прокта.</p>
+                    <p>BEM как и большинство успешных решений в разработке использует принцип DRY. На практике это означает
+                        что в
+                        <em>одном html теге</em> может быть
+                        <em>несколько названий элементов</em>
+                    </p>
+                    <h4>Какой суффикс выбрать для элемента
+                        <em>burger-btn?</em>
+                    </h4>
+                    <ul>
+                        <li>__item</li>
+                        <li>__line</li>
+                        <li>__elem</li>
+                        <li> __top</li>
+                        <li class="warning">__line-top</li>
+                        <li>...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>modifier</h3>
+            <figure>
+                <cite>Чёрная роза — эмблема печали, красная роза — эмблема любви</cite>
+                <figcaption>кинофильм Sergey Solovev</figcaption>
+            </figure>
+            <div class="row">
+                <div class="img-wrp">
+                        <div class="burger-btn" id="hideOff-2">
+                                <div class="burger-btn__line burger-btn__top"></div>
+                                <div class="burger-btn__line burger-btn__center"></div>
+                                <div class="burger-btn__line burger-btn__bottom"></div>
+                            </div>
+                    <img class="hide img-answer-2" src="./img/modifier.png" alt="modifier">
+                </div>
+                <div class="text-wrp">
+                    <p>Блоки могут потребовать изменить свой вид или поведение. Например при смене фона. Для таких случаев используют
+                        модификатор. Это дополнительный класс с синтаксисом
+                        <span class="comment">block__elem__modifier</span>
+                    </p>
+                    <p>Модификатор — дополнительный класс для смены оформления или поведения. Поэтому в названии необходимо
+                        отобразить:
+                    </p>
+                    <ul>
+                        <li>что это</li>
+                        <li>что изменяется</li>
+                        <li>чем отличается от прочих</li>
+                    </ul>
+                    <p class="warning">Для модификатора принцип DRY состоит в том, что модификатор всегда
+                        <em>добавляется</em> к имеющемуся имени элемента. Это означает, что тегу добавляют такой же класс с модификатором,
+                        а не заменяют название. Например:
+                    </p>
+                    <p class="comment">&lt;div class="block block--red"</p>
+                    <p class="comment">&lt;div class="block__elem block__elem--red"</p>
+                    <p>Такая запись позволяет не перезаписывать все css правила для нового блока, а только описывать изменяемые
+                        свойства.
+                    </p>
+                    <h4>Какой суффикс выбрать для элемента
+                            <em>burger-btn__top</em> после клика?
+                        </h4>
+                        <ul>
+                            <li>--45deg</li>
+                            <li>--click</li>
+                            <li class="warning">--x</li>
+                            <li>--off</li>
+                            <li>...</li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+                <h3>Задание</h3>
+                <pre>
+         ТЗ : во все .card main вставить 
+                - burger-btn 
+                - размером 1rem и 
+                - белого цвета 
+                - в верхний левый угол 
+                - c отступом .5rem от сторон
+             </pre>
+                <p>
+                    <a href="https://codepen.io/Gorbulin/pen/gjQWBr">link to codepen</a></p>
+        </section>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
